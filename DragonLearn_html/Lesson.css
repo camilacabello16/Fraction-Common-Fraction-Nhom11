@@ -359,3 +359,55 @@ p{
 /* lesson 2 */
 
 /* lesson 3 */
+.lesson-require{
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+.input-numerator{
+    border: 2px solid #12B1FF;
+    height: 58px;
+    width: 46px;
+    border-radius: 6px;
+    font-size: 55px;
+    text-align: center;
+    outline: none;
+}
+.insert-fr--numerator {
+    height: 58px;
+    width: 46px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+.insert-fr {
+    padding-top: 150px;
+}
+.insert-fr--bar{
+    height: 4px;
+    background-color: #000;
+    border-radius: 7px;
+    width: 59px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+.input-btn-done {
+    width: 85px;
+    height: 45px;
+    background-color: #6EC3E2;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    bottom: -192px;
+    left: 50%;
+    transform: translateX(-50%);
+    outline: none;
+}
+.wp-content-lesson-3 {
+    position: relative;
+}
+.input-btn-done:disabled{
+    opacity: 0.5;
+}
