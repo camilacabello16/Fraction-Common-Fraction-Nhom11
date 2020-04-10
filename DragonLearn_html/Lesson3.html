@@ -10,11 +10,11 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./vendor/jquery.mmenu.all.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <link rel="stylesheet" type="text/css" href="Lesson.css">
 </head>
 <body>
-    <div class="wp-background-lesson">
+    <div id="lesson-3" class="wp-background-lesson">
         <div class="wp-banner-lesson ">
             <div class="wp-nb-lesson">
                 <a href="" class="btn-back">
@@ -22,15 +22,61 @@
                     <span>Back</span>
                 </a>
                 <div class="nb-lesson">
-                    <div class="wp-img-ball">
+                    <div class="wp-img-ball" style="margin-top: 2px;">
                         <img src="./img/ball.png">
                     </div>
-                    <div class="wp-img-ball">
+                    <div class="wp-img-ball" style="margin-top: 2px;">
                         <img src="./img/ball.png">
                     </div>
                 </div>
             </div>
-        </div>                                             
+            <div class="wp-content-lesson-3">
+                <p class="lesson-require"> Write the fraction with denominator 4 and numerator 1</p>
+                <div class="insert-fr">
+                    <div class="insert-fr--numerator">
+                        <input class="input-numerator" type="text">
+                    </div>
+                    <div class="insert-fr--bar"></div>
+                    <div class="insert-fr--numerator">
+                        <input class="input-numerator" type="text">
+                    </div>
+                </div>
+                <input v-on:click="test" class="input-btn-done" type="button" value="Done" disabled>
+            </div>
+        </div>
+        <div class="wp-banner-lesson hidden-lesson">
+            <div class="wp-nb-lesson">
+                <a href="" class="btn-back">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Back</span>
+                </a>
+                <div class="nb-lesson">
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="./img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-3" style="margin-top: 2px;">
+                        <img src="./img/ball.png">
+                    </div>
+                </div>
+            </div>
+            <div class="wp-content-lesson-3">
+                <p class="lesson-require">Write the fraction with numerator 4 and denominator 5</p>
+                <div class="insert-fr">
+                    <div class="insert-fr--numerator">
+                        <input class="input-numerator" type="text">
+                    </div>
+                    <div class="insert-fr--bar"></div>
+                    <div class="insert-fr--numerator">
+                        <input class="input-numerator" type="text">
+                    </div>
+                </div>
+                <input v-on:click="test" class="input-btn-done" type="button" value="Done" disabled>
+            </div>
+        </div>                                              
     </div>
+
+    <script src="./vendor/jquery-3.4.1.min.js"></script>
+    <script src="Lesson3.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
