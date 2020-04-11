@@ -12,10 +12,11 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <link rel="stylesheet" type="text/css" href="Lesson.css">
+    <link rel="stylesheet" type="text/css" href="success.css">
 </head>
 <body>
-    <div id="lesson-3" class="wp-background-lesson">
-        <div class="wp-banner-lesson ">
+    <div id="lesson-3" class="wp-background-lesson" v-bind:class="{'hidden-background' : checkSuccess == 1}">
+        <div class="wp-banner-lesson " v-bind:class="{'hidden-lesson' : checkNextScreen==1}">
             <div class="wp-nb-lesson">
                 <a href="" class="btn-back">
                     <i class="fas fa-chevron-left"></i>
@@ -31,20 +32,20 @@
                 </div>
             </div>
             <div class="wp-content-lesson-3">
-                <p class="lesson-require"> Write the fraction with denominator 4 and numerator 1</p>
+                <p class="lesson-require">Write the fraction with denominator 4 and numerator 1</p>
                 <div class="insert-fr">
                     <div class="insert-fr--numerator">
-                        <input class="input-numerator" type="text">
+                        <input v-on:input="inputNumerator" class="input-numerator" type="text" v-model:value="numerator_inp">
                     </div>
                     <div class="insert-fr--bar"></div>
                     <div class="insert-fr--numerator">
-                        <input class="input-numerator" type="text">
+                        <input v-on:input="inputDenominator" class="input-numerator" type="text" v-model:value="denominator_inp">
                     </div>
                 </div>
-                <input v-on:click="test" class="input-btn-done" type="button" value="Done" disabled>
+                <input id="btn-done-wrong" v-on:click="checkPass" class="input-btn-done" type="button" value="Done">
             </div>
         </div>
-        <div class="wp-banner-lesson hidden-lesson">
+        <div class="wp-banner-lesson " v-bind:class="{'hidden-lesson' : checkNextScreenTwo==0}">
             <div class="wp-nb-lesson">
                 <a href="" class="btn-back">
                     <i class="fas fa-chevron-left"></i>
@@ -63,16 +64,27 @@
                 <p class="lesson-require">Write the fraction with numerator 4 and denominator 5</p>
                 <div class="insert-fr">
                     <div class="insert-fr--numerator">
-                        <input class="input-numerator" type="text">
+                        <input v-on:input="inputNumeratorTwo" class="input-numerator" type="text" v-model:value="numerator_inp_two">
                     </div>
                     <div class="insert-fr--bar"></div>
                     <div class="insert-fr--numerator">
-                        <input class="input-numerator" type="text">
+                        <input v-on:input="inputDenominatorTwo" class="input-numerator" type="text" v-model:value="denominator_inp_two">
                     </div>
                 </div>
-                <input v-on:click="test" class="input-btn-done" type="button" value="Done" disabled>
+                <input id="btn-done-wrong-2" v-on:click="checkPassTwo" class="input-btn-done" type="button" value="Done" >
             </div>
-        </div>                                              
+        </div>
+        <div class="wp-banner-success" v-bind:class="{'hidden-lesson' : checkSuccess == 0}">
+            <div class="success-txt">
+                <p>Well done! You completed the card!</p>
+            </div>
+            <div class="success-img">
+                <img src="./img/success.png">
+            </div>
+            <div class="success-btn">
+                <a href="../DragonLearn_html/DragonLearn.html">Go to lesson</a>
+            </div>
+        </div>                                           
     </div>
 
     <script src="./vendor/jquery-3.4.1.min.js"></script>
