@@ -23,6 +23,9 @@ p{
     background-size: cover;
     padding-top: 25px;
 }
+.hidden-background{
+    background-image: none;
+}
 .wp-banner-lesson{
     width: 960px;
     min-height: 650px;
@@ -225,6 +228,7 @@ p{
 }
 .hidden-lesson{
     display: none;
+    transition: 0.5s;
 }
 .denominator-txt{
     font-size: 24px;
@@ -404,10 +408,15 @@ p{
     left: 50%;
     transform: translateX(-50%);
     outline: none;
+    transition: 0.3s;
 }
 .wp-content-lesson-3 {
     position: relative;
 }
 .input-btn-done:disabled{
     opacity: 0.5;
+}
+.input-btn-done:hover{
+    background-color:#2eaddb;
+    transition: 0.3s;
 }
