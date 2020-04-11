@@ -46,7 +46,8 @@ var vueLsOne = new Vue({
                 this.optTwo = 2;
             }
             else{
-                alert('Wrong answer!');
+                $('#opt-three').addClass('test');
+                setTimeout(function(){$('#opt-three').removeClass('test');},1300);
             }
         },
         handleClickOptThree(){
@@ -54,7 +55,8 @@ var vueLsOne = new Vue({
                 this.optThree = 3;
             }
             else{
-                alert('Wrong answer!');
+                $('#opt-two').addClass('test');
+                setTimeout(function(){$('#opt-two').removeClass('test');},1300);
             }
         }
     }
