@@ -201,6 +201,10 @@ a:hover{
     position: relative;
     margin-right: 30px;
 }
+.learn-topic:hover .learn-txt a {
+    transition: 0.3s;
+    color: #ff4658;
+}
 .learn-topic--img img {
     width: 100%;
     border-radius: 10px;
