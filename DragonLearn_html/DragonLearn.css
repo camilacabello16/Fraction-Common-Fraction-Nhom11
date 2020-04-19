@@ -46,6 +46,9 @@ a:hover{
     display: flex;
     padding: 5px;
 }
+.learn-topic a {
+    display: block;
+}
 .invite-people {
     width: 105px;
     height: 40px;
