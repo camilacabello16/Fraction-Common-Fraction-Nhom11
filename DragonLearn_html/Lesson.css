@@ -21,6 +21,7 @@ p{
     height: 100vh;
     background-image: url("./img/galaxy-background.jpg");
     background-size: cover;
+    background-position: center;
     padding-top: 25px;
 }
 .hidden-background{
@@ -361,6 +362,58 @@ p{
 }
 
 /* lesson 2 */
+.wp-content-lesson-2{
+    text-align: center;
+    padding-top: 25px;
+}
+.btn-check-ans {
+    background-color: #6EC3E2;
+    border-radius: 5px;
+    width: 62px;
+    margin: 0 auto;
+    padding: 5px 0;
+    transition: 0.3s;
+}
+.btn-check-ans a{
+    color: #fff;
+    font-size: 24px;
+    display: block;
+}
+.line-fraction-page1 {
+    height: 2px;
+    width: 40px;
+    background-color: #000;
+    border-radius: 5px;
+    margin: auto;
+}
+.content-lesson-txt{
+    font-size: 36px;
+    font-weight: 700;
+}
+.wp-fr-answer p{
+    font-size: 30px;
+}
+.answer {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.page-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 180px;
+}
+.wp-fr-answer {
+    height: 150px;
+}
+.non-fr{
+    margin-top: 15px;
+}
+.btn-check-ans:hover{
+    background-color: #4FBDB3;
+    transition: 0.3s;
+}
 
 /* lesson 3 */
 .lesson-require{
