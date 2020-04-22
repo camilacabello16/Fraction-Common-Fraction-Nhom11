@@ -414,6 +414,57 @@ p{
     background-color: #4FBDB3;
     transition: 0.3s;
 }
+.ques-fr--num{
+    font-size: 65px;
+}
+.ques-fr--bar {
+    width: 86px;
+    border-bottom: 3px solid #000;
+    border-radius: 1px;
+    margin: 0 auto;
+    margin-top: -8px;
+    margin-bottom: -8px;
+}
+.ques-fr {
+    padding-top: 80px;
+}
+.ques-title-block{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.ques-title-block p{
+    font-size: 42px;
+}
+.ques-title-block--field{
+    width: 75px;
+    height: 45px;
+    border: 2px solid #12b1ff;
+    border-radius: 6px;
+    outline: none;
+    text-align: center;
+    font-size: 38px;
+    margin-left: 20px;
+}
+.wp-btn-link-next{
+    width: 85px;
+    height: 45px;
+    background-color: #6EC3E2;
+    border-radius: 5px;
+    margin: 0 auto;
+    line-height: 45px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+.wp-btn-link-next:hover{
+    background-color: #59BBDE;
+    transition: 0.3s;
+}
+.wp-btn-link-next a{
+    color: #fff;
+    font-size: 24px;
+    display: block;
+}
 
 /* lesson 3 */
 .lesson-require{
