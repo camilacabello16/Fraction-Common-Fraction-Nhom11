@@ -559,6 +559,86 @@ p{
     font-size: 24px;
     display: block;
 }
+.ball-8-ls2 {
+    position: absolute;
+    right: 3px;
+    top: 0;
+    animation-name: animate-ball-8;
+    animation-duration: 1.5s;
+}
+.ball-7-ls2 {
+    position: absolute;
+    right: 27px;
+    top: 0;
+    animation-name: animate-ball-7;
+    animation-duration: 1.5s;
+}
+.ball-6-ls2 {
+    position: absolute;
+    right: 51px;
+    top: 0;
+    animation-name: animate-ball-6;
+    animation-duration: 1.5s;
+}
+.ball-5-ls2 {
+    position: absolute;
+    right: 75px;
+    top: 0;
+    animation-name: animate-ball-5;
+    animation-duration: 1.5s;
+}
+.ball-4-ls2 {
+    position: absolute;
+    right: 99px;
+    top: 0;
+    animation-name: animate-ball-4;
+    animation-duration: 1.5s;
+}
+.ball-3-ls2 {
+    position: absolute;
+    right: 123px;
+    top: 0;
+    animation-name: animate-ball-3;
+    animation-duration: 1.5s;
+}
+.ball-2-ls2 {
+    position: absolute;
+    right: 147px;
+    top: 0;
+    animation-name: animate-ball-2;
+    animation-duration: 1.5s;
+}
+.delay {
+    animation-delay: -1.5s;
+}
+@keyframes animate-ball-8{
+    from {right:262px;}
+    to {right: 3px;}
+}
+@keyframes animate-ball-7{
+    from {right:288px;}
+    to {right: 27px;}
+}
+@keyframes animate-ball-6{
+    from {right:314px;}
+    to {right: 51px;}
+}
+@keyframes animate-ball-5{
+    from {right:340px;}
+    to {right: 75px;}
+}
+@keyframes animate-ball-4{
+    from {right:366px;}
+    to {right: 99px;}
+}
+@keyframes animate-ball-3{
+    from {right:392px;}
+    to {right: 123px;}
+}
+@keyframes animate-ball-2{
+    from {right:418px;}
+    to {right: 147px;}
+}
 
 /* lesson 3 */
 .lesson-require{
