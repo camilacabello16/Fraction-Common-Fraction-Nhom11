@@ -194,7 +194,7 @@ p{
 }
 @keyframes example {
     from {background-color: #cecbc6;}
-    to {background-color: red;}
+    to {background-color: #ff5768;}
   }
 .answer-opt:hover{
     background-color: #cecbc6;
@@ -373,11 +373,9 @@ p{
     margin: 0 auto;
     padding: 5px 0;
     transition: 0.3s;
-}
-.btn-check-ans a{
     color: #fff;
     font-size: 24px;
-    display: block;
+    cursor: pointer;
 }
 .line-fraction-page-1 {
     height: 2px;
@@ -406,15 +404,13 @@ p{
     transition: 0.3s;
     border-radius: 5px;
     line-height: 45px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
 }
 .answer-Y:hover{
     background-color: #59BBDE;
     transition: 0.3s;
-}
-.answer-Y a{
-    font-size: 24px;
-    color: #fff;
-    display: block;
 }
 .page-1 {
     display: flex;
@@ -549,15 +545,13 @@ p{
     line-height: 45px;
     transition: 0.3s;
     margin-top: 20px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
 }
 .wp-btn-link-next:hover{
     background-color: #59BBDE;
     transition: 0.3s;
-}
-.wp-btn-link-next a{
-    color: #fff;
-    font-size: 24px;
-    display: block;
 }
 .ball-8-ls2 {
     position: absolute;
@@ -638,6 +632,12 @@ p{
 @keyframes animate-ball-2{
     from {right:418px;}
     to {right: 147px;}
+}
+.background-wrong-ans{
+    background-color: #ff5768;
+}
+.background-right-ans{
+    background-color: #8fbf82;
 }
 
 /* lesson 3 */
