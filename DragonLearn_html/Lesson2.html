@@ -10,12 +10,14 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./vendor/jquery.mmenu.all.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 
     <link rel="stylesheet" type="text/css" href="Lesson.css">
+    <link rel="stylesheet" type="text/css" href="success.css">
 </head>
 <body>
-    <div class="wp-background-lesson">
-        <div class="wp-banner-lesson ">
+    <div class="wp-background-lesson" id="lesson-2" v-bind:class="{'hidden-background' : displayScreenSuccess == 0}">
+        <div class="wp-banner-lesson " v-bind:class="{'hidden-lesson' : displayScreenOne == 1}">
             <div class="wp-nb-lesson">
                 <a href="../DragonLearn_html/DragonLearn.html" class="btn-back">
                     <i class="fas fa-chevron-left"></i>
@@ -56,11 +58,7 @@
                             <div class="wp-fr-answer">
                                 <p class="non-fr">cow</p>
                             </div>
-                            <div class="btn-check-ans">
-                                <a href="">
-                                    OK
-                                </a>
-                            </div>
+                            <div class="btn-check-ans" id="wrong-answer-2" v-on:click="onClickWrongAns2">OK</div>
                         </div>
                         <div class="answer answer-2">
                             <div class="wp-fr-answer">
@@ -72,27 +70,21 @@
                                     <p>43</p>
                                 </div>
                             </div>
-                            <div class="btn-check-ans">
-                                <a href="">
-                                    OK
-                                </a>
+                            <div class="btn-check-ans" id="right-ans" v-on:click="onClickRightAns">OK
                             </div>
                         </div>
                         <div class="answer answer-3">
                             <div class="wp-fr-answer">
                                 <p class="non-fr">14</p>
                             </div>
-                            <div class="btn-check-ans">
-                                <a href="">
-                                    OK
-                                </a>
+                            <div class="btn-check-ans" id="wrong-answer-1" v-on:click="onClickWrongAns1">OK
                             </div>
                         </div>
                     </div>
                 </div>
             </div> 
         </div>
-        <div class="wp-banner-lesson hidden-lesson">
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson' : displayScreenTwo == 1}">
             <div class="wp-nb-lesson">
                 <a href="../DragonLearn_html/DragonLearn.html" class="btn-back">
                     <i class="fas fa-chevron-left"></i>
@@ -139,22 +131,16 @@
                         </div>
                         <p class="content-ls2 page-3">Is this fraction denominator?</p>
                         <div class="Y-N-ans">
-                            <div class=" answer-Y">
-                                <a href="">
-                                    Yes
-                                </a>
+                            <div class=" answer-Y" id="wrong-screen-2" v-on:click="wrongAnsScreen2">Yes
                             </div>
-                            <div class=" answer-Y">
-                                <a href="">
-                                    No
-                                </a>
+                            <div class=" answer-Y" id="right-screen-2" v-on:click="rightAnsScreen2">No
                             </div>
                         </div>
                     </div>
                 </div>
             </div> 
         </div>   
-        <div class="wp-banner-lesson hidden-lesson">
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson': displayScreenThree == 1}">
             <div class="wp-nb-lesson">
                 <a href="../DragonLearn_html/DragonLearn.html" class="btn-back">
                     <i class="fas fa-chevron-left"></i>
@@ -201,22 +187,16 @@
                         </div>
                         <p class="content-ls2 page-3">Is this fraction numerator?</p>
                         <div class="Y-N-ans">
-                            <div class=" answer-Y">
-                                <a href="">
-                                    Yes
-                                </a>
+                            <div class=" answer-Y" id="wrong-screen-3" v-on:click="wrongAnsScreen3">Yes
                             </div>
-                            <div class=" answer-Y">
-                                <a href="">
-                                    No
-                                </a>
+                            <div class=" answer-Y" id="right-screen-3" v-on:click="rightAnsScreen3">No
                             </div>
                         </div>
                     </div>
                 </div>
             </div> 
         </div>  
-        <div class="wp-banner-lesson hidden-lesson">
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson': displayScreenFour == 1}">
             <div class="wp-nb-lesson">
                 <a href="../DragonLearn_html/DragonLearn.html" class="btn-back">
                     <i class="fas fa-chevron-left"></i>
@@ -263,22 +243,16 @@
                         </div>
                         <p class="content-ls2 page-3">Is this fraction denominator?</p>
                         <div class="Y-N-ans">
-                            <div class=" answer-Y">
-                                <a href="">
-                                    Yes
-                                </a>
+                            <div class=" answer-Y" id="right-screen-4" v-on:click="rightAnsScreen4">Yes
                             </div>
-                            <div class=" answer-Y">
-                                <a href="">
-                                    No
-                                </a>
+                            <div class=" answer-Y" id="wrong-screen-4" v-on:click="wrongAnsScreen4">No
                             </div>
                         </div>
                     </div>
                 </div>
             </div> 
         </div>  
-        <div class="wp-banner-lesson hidden-lesson">
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson': displayScreenFive == 1}">
             <div class="wp-nb-lesson">
                 <a href="../DragonLearn_html/DragonLearn.html" class="btn-back">
                     <i class="fas fa-chevron-left"></i>
@@ -325,22 +299,16 @@
                         </div>
                         <p class="content-ls2 page-3">Is this fraction denominator?</p>
                         <div class="Y-N-ans">
-                            <div class=" answer-Y">
-                                <a href="">
-                                    Yes
-                                </a>
+                            <div class=" answer-Y" id="wrong-screen-5" v-on:click="wrongAnsScreen5">Yes
                             </div>
-                            <div class=" answer-Y">
-                                <a href="">
-                                    No
-                                </a>
+                            <div class=" answer-Y" id="right-screen-5" v-on:click="rightAnsScreen5">No
                             </div>
                         </div>
                     </div>
                 </div>
             </div> 
         </div>    
-        <div class="wp-banner-lesson hidden-lesson">
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson': displayScreenSix == 1}">
             <div class="wp-nb-lesson">
                 <a href="../DragonLearn_html/DragonLearn.html" class="btn-back">
                     <i class="fas fa-chevron-left"></i>
@@ -382,15 +350,14 @@
                     </div>
                     <div class="ques-title-block">
                         <p class="ques-title-block--txt">What is the numerator of this fraction?</p>
-                        <input type="text" class="ques-title-block--field">
+                        <input type="text" class="ques-title-block--field" v-on:input="handleInputPlayer" v-model:value="inputAnsSix">
                     </div>
-                    <div class="wp-btn-link-next">
-                        <a href="">Done</a>
+                    <div class="wp-btn-link-next" id="btn-done-six" v-on:click="handleClickDone">Done
                     </div>
                 </div>
             </div> 
         </div> 
-        <div class="wp-banner-lesson hidden-lesson">
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson': displayScreenSeven == 1}">
             <div class="wp-nb-lesson">
                 <a href="../DragonLearn_html/DragonLearn.html" class="btn-back">
                     <i class="fas fa-chevron-left"></i>
@@ -432,15 +399,14 @@
                     </div>
                     <div class="ques-title-block">
                         <p class="ques-title-block--txt">What is the denominator of this fraction?</p>
-                        <input type="text" class="ques-title-block--field">
+                        <input type="text" class="ques-title-block--field" v-on:input="handleInputPlayerSeven" v-model:value="inputAnsSeven">
                     </div>
-                    <div class="wp-btn-link-next">
-                        <a href="">Done</a>
+                    <div class="wp-btn-link-next" id="btn-done-seven" v-on:click="handleClickDoneSeven">Done
                     </div>
                 </div>
             </div> 
         </div>  
-        <div class="wp-banner-lesson hidden-lesson">
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson': displayScreenEight == 1}">
             <div class="wp-nb-lesson">
                 <a href="../DragonLearn_html/DragonLearn.html" class="btn-back">
                     <i class="fas fa-chevron-left"></i>
@@ -482,14 +448,28 @@
                     </div>
                     <div class="ques-title-block">
                         <p class="ques-title-block--txt">What is the numerator of this fraction?</p>
-                        <input type="text" class="ques-title-block--field">
+                        <input type="text" class="ques-title-block--field" v-on:input="handleInputPlayerEight" v-model:value="inputAnsEight">
                     </div>
-                    <div class="wp-btn-link-next">
-                        <a href="">Done</a>
+                    <div class="wp-btn-link-next" id="btn-done-eight" v-on:click="handleClickDoneEight">Done
                     </div>
                 </div>
             </div> 
-        </div>                                              
+        </div>   
+        <div class="wp-banner-success" v-bind:class="{'hidden-lesson' : displayScreenSuccess == 1}">
+            <div class="success-txt">
+                <p>Well done! You completed the card!</p>
+            </div>
+            <div class="success-img">
+                <img src="./img/success.png">
+            </div>
+            <div class="success-btn">
+                <a href="../DragonLearn_html/DragonLearn.html">Go to lesson</a>
+            </div>
+        </div>                                             
     </div>
+
+    <script src="./vendor/jquery-3.4.1.min.js"></script>
+    <script src="./Lesson2.js"></script>
+
 </body>
 </html>
