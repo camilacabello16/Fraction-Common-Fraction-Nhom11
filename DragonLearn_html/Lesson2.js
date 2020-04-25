@@ -43,8 +43,11 @@ var vueLsTwo = new Vue({
         },
         onClickRightAns(){
             $('#right-ans').addClass('background-right-ans');
-            this.displayScreenOne = 1;
-            this.displayScreenTwo = 0;
+            setTimeout(function(){$('#right-ans').removeClass('background-right-ans');},1000);
+            setTimeout(()=>{
+                this.displayScreenOne = 1;
+                this.displayScreenTwo = 0;
+            },700);
         },
         //screen 2
         wrongAnsScreen2(){
@@ -53,8 +56,11 @@ var vueLsTwo = new Vue({
         },
         rightAnsScreen2(){
             $('#right-screen-2').addClass('background-right-ans');
-            this.displayScreenTwo = 1;
-            this.displayScreenThree = 0;
+            setTimeout(function(){$('#right-screen-2').removeClass('background-right-ans');},1000);
+            setTimeout(()=>{
+                this.displayScreenTwo = 1;
+                this.displayScreenThree = 0;
+            },700);
         },
         //screen 3
         wrongAnsScreen3(){
@@ -63,8 +69,11 @@ var vueLsTwo = new Vue({
         },
         rightAnsScreen3(){
             $('#right-screen-3').addClass('background-right-ans');
-            this.displayScreenThree = 1;
-            this.displayScreenFour = 0;
+            setTimeout(function(){$('#right-screen-3').removeClass('background-right-ans');},1000);
+            setTimeout(()=>{
+                this.displayScreenThree = 1;
+                this.displayScreenFour = 0;
+            },700);
         },
         //screen 4
         wrongAnsScreen4(){
@@ -73,8 +82,11 @@ var vueLsTwo = new Vue({
         },
         rightAnsScreen4(){
             $('#right-screen-4').addClass('background-right-ans');
-            this.displayScreenFive = 0;
-            this.displayScreenFour = 1;
+            setTimeout(function(){$('#right-screen-4').removeClass('background-right-ans');},1000);
+            setTimeout(()=>{
+                this.displayScreenFive = 0;
+                this.displayScreenFour = 1;
+            },700)
         },
         //screen 5
         wrongAnsScreen5(){
@@ -83,8 +95,11 @@ var vueLsTwo = new Vue({
         },
         rightAnsScreen5(){
             $('#right-screen-5').addClass('background-right-ans');
-            this.displayScreenFive = 1;
-            this.displayScreenSix = 0;
+            setTimeout(function(){$('#right-screen-5').removeClass('background-right-ans');},1000);
+            setTimeout(()=>{
+                this.displayScreenFive = 1;
+                this.displayScreenSix = 0;
+            },700)
         },
         //screen 6
         handleInputPlayer(){
@@ -92,8 +107,12 @@ var vueLsTwo = new Vue({
         },
         handleClickDone(){
             if(this.saveInput == this.ansSix){
-                this.displayScreenSix = 1;
-                this.displayScreenSeven = 0;
+                $('#btn-done-six').addClass('background-right-ans'); 
+                setTimeout(function(){$('#btn-done-six').removeClass('background-right-ans');},1000);
+                setTimeout(()=>{
+                    this.displayScreenSix = 1;
+                    this.displayScreenSeven = 0;
+                },700) 
             }
             else{
                 $('#btn-done-six').addClass('test'); 
@@ -106,8 +125,12 @@ var vueLsTwo = new Vue({
         },
         handleClickDoneSeven(){
             if(this.saveInputSeven == this.ansSeven){
-                this.displayScreenEight = 0;
-                this.displayScreenSeven = 1;
+                $('#btn-done-seven').addClass('background-right-ans'); 
+                setTimeout(function(){$('#btn-done-seven').removeClass('background-right-ans');},1000);
+                setTimeout(()=>{
+                    this.displayScreenEight = 0;
+                    this.displayScreenSeven = 1;
+                },700)
             }
             else{
                 $('#btn-done-seven').addClass('test'); 
@@ -120,8 +143,12 @@ var vueLsTwo = new Vue({
         },
         handleClickDoneEight(){
             if(this.saveInputEight == this.ansEight){
-                this.displayScreenEight = 1;
-                this.displayScreenSuccess = 0;
+                $('#btn-done-eight').addClass('background-right-ans'); 
+                setTimeout(function(){$('#btn-done-eight').removeClass('background-right-ans');},1000);
+                setTimeout(()=>{
+                    this.displayScreenEight = 1;
+                    this.displayScreenSuccess = 0;
+                },700)
             }
             else{
                 $('#btn-done-eight').addClass('test'); 
