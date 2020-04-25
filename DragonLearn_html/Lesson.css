@@ -637,7 +637,13 @@ p{
     background-color: #ff5768;
 }
 .background-right-ans{
-    background-color: #8fbf82;
+    animation-name: animateRight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+@keyframes animateRight {
+    from {background-color: #6EC3E2;}
+    to {background-color: #8fbf82;}
 }
 
 /* lesson 3 */
