@@ -47,7 +47,7 @@ var vueLsTwo = new Vue({
             setTimeout(()=>{
                 this.displayScreenOne = 1;
                 this.displayScreenTwo = 0;
-            },700);
+            },800);
         },
         //screen 2
         wrongAnsScreen2(){
@@ -60,7 +60,7 @@ var vueLsTwo = new Vue({
             setTimeout(()=>{
                 this.displayScreenTwo = 1;
                 this.displayScreenThree = 0;
-            },700);
+            },800);
         },
         //screen 3
         wrongAnsScreen3(){
@@ -73,7 +73,7 @@ var vueLsTwo = new Vue({
             setTimeout(()=>{
                 this.displayScreenThree = 1;
                 this.displayScreenFour = 0;
-            },700);
+            },800);
         },
         //screen 4
         wrongAnsScreen4(){
@@ -86,7 +86,7 @@ var vueLsTwo = new Vue({
             setTimeout(()=>{
                 this.displayScreenFive = 0;
                 this.displayScreenFour = 1;
-            },700)
+            },800)
         },
         //screen 5
         wrongAnsScreen5(){
@@ -99,7 +99,7 @@ var vueLsTwo = new Vue({
             setTimeout(()=>{
                 this.displayScreenFive = 1;
                 this.displayScreenSix = 0;
-            },700)
+            },800)
         },
         //screen 6
         handleInputPlayer(){
@@ -112,7 +112,7 @@ var vueLsTwo = new Vue({
                 setTimeout(()=>{
                     this.displayScreenSix = 1;
                     this.displayScreenSeven = 0;
-                },700) 
+                },800) 
             }
             else{
                 $('#btn-done-six').addClass('test'); 
@@ -130,7 +130,7 @@ var vueLsTwo = new Vue({
                 setTimeout(()=>{
                     this.displayScreenEight = 0;
                     this.displayScreenSeven = 1;
-                },700)
+                },800)
             }
             else{
                 $('#btn-done-seven').addClass('test'); 
@@ -148,7 +148,7 @@ var vueLsTwo = new Vue({
                 setTimeout(()=>{
                     this.displayScreenEight = 1;
                     this.displayScreenSuccess = 0;
-                },700)
+                },800)
             }
             else{
                 $('#btn-done-eight').addClass('test'); 
