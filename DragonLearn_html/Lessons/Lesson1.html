@@ -62,7 +62,7 @@
                         </div>
                     </div>
                     <div class="lesson-anwser">
-                        <div class="answer-opt" v-on:click="rightAnswer" v-bind:class="{'hidden-lesson' : checkAnswer == 1}">
+                        <div class="answer-opt" id="right_answer_1" v-on:click="rightAnswer" v-bind:class="{'hidden-lesson' : checkAnswer == 1}">
                             <p>This is how many pieces are shaded</p>
                         </div>
                         <div class="answer-opt" id="wrong_answer_1" v-on:click="wrongAnswer" v-bind:class="{'hidden-lesson' : checkAnswer == 1}">
@@ -125,7 +125,7 @@
                         <div id="wrong_answer_3" class="answer-opt" v-on:click="" v-bind:class="{'hidden-lesson' : checkAnswerTwo == 1}">
                             <p>This is how many pieces are shaded</p>
                         </div>
-                        <div class="answer-opt" v-on:click="rightAnswerTwo" v-bind:class="{'hidden-lesson' : checkAnswerTwo == 1}">
+                        <div id="right_answer_2" class="answer-opt" v-on:click="rightAnswerTwo" v-bind:class="{'hidden-lesson' : checkAnswerTwo == 1}">
                             <p>The circle is divided into this many pieces</p>
                         </div>
                         <div id="wrong_answer_4" class="answer-opt" v-on:click="" v-bind:class="{'hidden-lesson' : checkAnswerTwo == 1}">
