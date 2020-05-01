@@ -1,3 +1,6 @@
+var rightSound = new Audio("../sound/right_answer.mp3");
+var wrongSound = new Audio("../sound/wrong_answer.mp3");
+
 var vueLsThree = new Vue({
     el: '#lesson-3',
     data(){
@@ -32,6 +35,7 @@ var vueLsThree = new Vue({
         checkPass(){
             if(this.numerator_save == this.numerator_ans && this.denominator_save == this.denominator_ans){
                 $('#btn-done-wrong').addClass('background-right-ans');
+                rightSound.play();
                 setTimeout(function(){$('#btn-done-wrong').removeClass('background-right-ans');},1300);
                 setTimeout(()=>{
                     this.checkNextScreenTwo = 1;
@@ -41,6 +45,7 @@ var vueLsThree = new Vue({
             else{
                 $('#btn-done-wrong').addClass('test');
                 setTimeout(function(){$('#btn-done-wrong').removeClass('test');},1300);
+                wrongSound.play();
             }
         },
         //screen 2
@@ -53,6 +58,7 @@ var vueLsThree = new Vue({
         checkPassTwo(){
             if(this.numerator_save_two == this.numerator_ans_two && this.denominator_save_two == this.denominator_ans_two){
                 $('#btn-done-wrong-2').addClass('background-right-ans');
+                rightSound.play();
                 setTimeout(function(){$('#btn-done-wrong-2').removeClass('background-right-ans');},1300);
                 setTimeout(()=>{
                     this.checkSuccess = 1;
@@ -62,6 +68,7 @@ var vueLsThree = new Vue({
             else{
                 $('#btn-done-wrong-2').addClass('test');
                 setTimeout(function(){$('#btn-done-wrong-2').removeClass('test');},1300);
+                wrongSound.play();
             }
         }
     },
