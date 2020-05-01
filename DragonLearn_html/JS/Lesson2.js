@@ -1,3 +1,6 @@
+var rightSound = new Audio("../sound/right_answer.mp3");
+var wrongSound = new Audio("../sound/wrong_answer.mp3");
+
 var vueLsTwo = new Vue({
     el: '#lesson-2',
     data(){
@@ -108,6 +111,7 @@ var vueLsTwo = new Vue({
         handleClickDone(){
             if(this.saveInput == this.ansSix){
                 $('#btn-done-six').addClass('background-right-ans'); 
+                rightSound.play();
                 setTimeout(function(){$('#btn-done-six').removeClass('background-right-ans');},1000);
                 setTimeout(()=>{
                     this.displayScreenSix = 1;
@@ -117,6 +121,7 @@ var vueLsTwo = new Vue({
             else{
                 $('#btn-done-six').addClass('test'); 
                 setTimeout(function(){$('#btn-done-six').removeClass('test');},1000); 
+                wrongSound.play();
             }
         },
         //screen 7
@@ -126,6 +131,7 @@ var vueLsTwo = new Vue({
         handleClickDoneSeven(){
             if(this.saveInputSeven == this.ansSeven){
                 $('#btn-done-seven').addClass('background-right-ans'); 
+                rightSound.play();
                 setTimeout(function(){$('#btn-done-seven').removeClass('background-right-ans');},1000);
                 setTimeout(()=>{
                     this.displayScreenEight = 0;
@@ -135,6 +141,7 @@ var vueLsTwo = new Vue({
             else{
                 $('#btn-done-seven').addClass('test'); 
                 setTimeout(function(){$('#btn-done-seven').removeClass('test');},1000); 
+                wrongSound.play();
             }
         },
         //screen 8
@@ -144,6 +151,7 @@ var vueLsTwo = new Vue({
         handleClickDoneEight(){
             if(this.saveInputEight == this.ansEight){
                 $('#btn-done-eight').addClass('background-right-ans'); 
+                rightSound.play();
                 setTimeout(function(){$('#btn-done-eight').removeClass('background-right-ans');},1000);
                 setTimeout(()=>{
                     this.displayScreenEight = 1;
@@ -153,6 +161,7 @@ var vueLsTwo = new Vue({
             else{
                 $('#btn-done-eight').addClass('test'); 
                 setTimeout(function(){$('#btn-done-eight').removeClass('test');},1000); 
+                wrongSound.play();
             }
         }
     }
