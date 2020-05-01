@@ -1,3 +1,6 @@
+var rightSound = new Audio("../sound/right_answer.mp3");
+var wrongSound = new Audio("../sound/wrong_answer.mp3");
+
 var vueLsOne = new Vue({
     el: '#lesson-1',
     data(){
@@ -40,22 +43,27 @@ var vueLsOne = new Vue({
         //screen 3
         handleClickOptOne(){
             this.optOne = 1;
+            rightSound.play();
         },
         handleClickOptTwo(){
             if(this.optOne==1){
                 this.optTwo = 2;
+                rightSound.play();
             }
             else{
                 $('#opt-three').addClass('test');
+                wrongSound.play();
                 setTimeout(function(){$('#opt-three').removeClass('test');},1300);
             }
         },
         handleClickOptThree(){
             if(this.optTwo==2){
                 this.optThree = 3;
+                rightSound.play();
             }
             else{
                 $('#opt-two').addClass('test');
+                wrongSound.play();
                 setTimeout(function(){$('#opt-two').removeClass('test');},1300);
             }
         }
