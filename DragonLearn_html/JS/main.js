@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var right_answer_audio = new Audio("../sound/right_answer.mp3");
+    var right_answer_audio = new Audio('../sound/right_answer.mp3');
     var wrong_answer_audio = new Audio("../sound/wrong_answer.mp3");
     //lesson 1
     $('#wrong_answer_1').click(function(event){
